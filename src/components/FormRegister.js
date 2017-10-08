@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import FileBase64 from 'react-file-base64';
+import axios from 'axios';
 
 export default class FormRegister extends Component {
 
@@ -32,10 +33,22 @@ export default class FormRegister extends Component {
     console.log("pet photo:", this.state.files)
   }
 
+  onSubmit = (e) => {
+        e.preventDefault();
+        // get our form data out of state
+        const { petName, ownerPhone, files } = this.state;
+
+        axios.post('https://3soxnncvth.execute-api.us-east-1.amazonaws.com/prod/registration', { petName, ownerPhone, files })
+          .then((result) => {
+            //access the results here....
+            console.log("pet registered")
+          });
+  }
+
 
   render() {
     return (
-      <Form id="register">
+      <Form id="register" method="post" onSubmit={this.onSubmit}>
         <Label>Pet Name:</Label>
         <input type="text"
                name="pet-name" 
