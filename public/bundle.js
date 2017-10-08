@@ -27117,78 +27117,10 @@ var RightButton = _styledComponents2.default.button(_templateObject3);
 
 /***/ }),
 /* 45 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 "use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _templateObject = _taggedTemplateLiteral(['\n  margin-top: 50px;\n  padding: 20px;\n  text-align: center;\n'], ['\n  margin-top: 50px;\n  padding: 20px;\n  text-align: center;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  font-family: \'Roboto\', san-serif;\n  color: #333;\n'], ['\n  font-size: 12px;\n  font-family: \'Roboto\', san-serif;\n  color: #333;\n']),
-    _templateObject3 = _taggedTemplateLiteral(['\n  display: block;\n  color: rgba(255,255,255,0.9);\n  font-family: \'Roboto\', san-serif;\n  font-size: 16px;\n  letter-spacing: 0.5px;\n  margin-right: 20px;\n  margin-left: 16px;\n  height: 46px;\n  background: #9E8869;\n  padding: 10px 12px;\n  border: 3px solid rgba(255,255,255,0.9);\n  border-radius: 3px;\n  text-align: center;\n'], ['\n  display: block;\n  color: rgba(255,255,255,0.9);\n  font-family: \'Roboto\', san-serif;\n  font-size: 16px;\n  letter-spacing: 0.5px;\n  margin-right: 20px;\n  margin-left: 16px;\n  height: 46px;\n  background: #9E8869;\n  padding: 10px 12px;\n  border: 3px solid rgba(255,255,255,0.9);\n  border-radius: 3px;\n  text-align: center;\n']);
-
-var _react = __webpack_require__(7);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _styledComponents = __webpack_require__(37);
-
-var _styledComponents2 = _interopRequireDefault(_styledComponents);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var FormRegister = function (_Component) {
-  _inherits(FormRegister, _Component);
-
-  function FormRegister() {
-    _classCallCheck(this, FormRegister);
-
-    return _possibleConstructorReturn(this, (FormRegister.__proto__ || Object.getPrototypeOf(FormRegister)).apply(this, arguments));
-  }
-
-  _createClass(FormRegister, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        Form,
-        { id: 'register' },
-        _react2.default.createElement(Label, null),
-        _react2.default.createElement('input', { type: 'text', name: 'pet-name' }),
-        _react2.default.createElement(Label, null),
-        _react2.default.createElement('input', { type: 'text', name: 'owner-phone-number' }),
-        _react2.default.createElement(
-          UploadButton,
-          null,
-          'Upload a photo of your pet'
-        )
-      );
-    }
-  }]);
-
-  return FormRegister;
-}(_react.Component);
-
-exports.default = FormRegister;
-
-
-var Form = _styledComponents2.default.form(_templateObject);
-
-var Label = _styledComponents2.default.label(_templateObject2);
-
-var UploadButton = _styledComponents2.default.button(_templateObject3);
+throw new Error("Module build failed: SyntaxError: Unexpected token (33:50)\n\n\u001b[0m \u001b[90m 31 | \u001b[39m               name\u001b[33m=\u001b[39m\u001b[32m\"pet-name\"\u001b[39m \n \u001b[90m 32 | \u001b[39m               value\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate\u001b[33m.\u001b[39mpetName}\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 | \u001b[39m               onChange\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandlePetNameChange\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33mLabel\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mLabel\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 35 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33minput\u001b[39m type\u001b[33m=\u001b[39m\u001b[32m\"text\"\u001b[39m\n \u001b[90m 36 | \u001b[39m               name\u001b[33m=\u001b[39m\u001b[32m\"owner-phone-number\"\u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 46 */

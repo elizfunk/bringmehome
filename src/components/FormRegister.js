@@ -3,13 +3,39 @@ import styled from 'styled-components';
 
 export default class FormRegister extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      petName: '',
+      ownerPhone: ''
+    }
+
+    handlePetNameChange = (event) => {
+      this.setState({
+        petName: event.target.value,
+      });
+    }
+
+    handlePhoneChange = (event) => {
+      this.setState({
+        ownerPhone: event.target.value,
+      });
+    }
+  }
+
   render() {
     return (
       <Form id="register">
         <Label></Label>
-        <input type="text" name="pet-name" />
+        <input type="text"
+               name="pet-name" 
+               value={this.state.petName}
+               onChange={this.handlePetNameChange/>
         <Label></Label>
-        <input type="text" name="owner-phone-number" />
+        <input type="text"
+               name="owner-phone-number"
+               value={this.state.ownerPhone}
+               onChange={this.handlePhoneChange} />
         <UploadButton>Upload a photo of your pet</UploadButton>
       </Form>
     );
