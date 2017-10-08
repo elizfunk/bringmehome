@@ -27130,8 +27130,6 @@ var _react = __webpack_require__(7);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactForm = __webpack_require__(53);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -27152,7 +27150,11 @@ var FormRegister = function (_Component) {
   _createClass(FormRegister, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_reactForm.Form, null);
+      return _react2.default.createElement(
+        'form',
+        null,
+        'Pet Name Owner Phone Number Image Upload'
+      );
     }
   }]);
 

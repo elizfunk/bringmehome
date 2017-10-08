@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { Form, Text } from 'react-form';
 
 export default class FormRegister extends Component {
 
   render() {
     return (
-      <Form>
-          
-      </Form>
+      <form>
+        Pet Name
+        Owner Phone Number
+        Image Upload
+      </form>
     );
   }
 }
