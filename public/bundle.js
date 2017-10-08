@@ -23043,8 +23043,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n\n  background: #333;\n  padding-left: 20px;\n  height: 60px;\n  width: 100%;\n'], ['\n\n  background: #333;\n  padding-left: 20px;\n  height: 60px;\n  width: 100%;\n']),
-    _templateObject2 = _taggedTemplateLiteral(['\n  color: rgba(235,235,235, 0.9);\n  font-family: \'Pacifico\', san-serif;\n  text-align: center;\n  font-weight: normal;\n  font-size: 34px;\n  line-height: 60px;\n'], ['\n  color: rgba(235,235,235, 0.9);\n  font-family: \'Pacifico\', san-serif;\n  text-align: center;\n  font-weight: normal;\n  font-size: 34px;\n  line-height: 60px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  margin: 0;\n  background: #333;\n  padding-left: 20px;\n  height: 80px;\n  width: 100%;\n'], ['\n  margin: 0;\n  background: #333;\n  padding-left: 20px;\n  height: 80px;\n  width: 100%;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  color: rgba(235,235,235, 0.9);\n  font-family: \'Pacifico\', san-serif;\n  text-align: left;\n  font-weight: normal;\n  font-size: 34px;\n  line-height: 80px;\n  margin: 0;\n'], ['\n  color: rgba(235,235,235, 0.9);\n  font-family: \'Pacifico\', san-serif;\n  text-align: left;\n  font-weight: normal;\n  font-size: 34px;\n  line-height: 80px;\n  margin: 0;\n']);
 
 var _react = __webpack_require__(7);
 
@@ -27128,7 +27128,9 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _templateObject = _taggedTemplateLiteral(['\n  color: rgba(255,255,255,0.9);\n  font-family: \'Roboto\', san-serif;\n  font-size: 16px;\n  letter-spacing: 0.5px;\n  margin-right: 20px;\n  margin-left: 16px;\n  height: 46px;\n  background: #9E8869;\n  padding: 10px 12px;\n  border: 3px solid rgba(255,255,255,0.9);\n  border-radius: 3px;\n'], ['\n  color: rgba(255,255,255,0.9);\n  font-family: \'Roboto\', san-serif;\n  font-size: 16px;\n  letter-spacing: 0.5px;\n  margin-right: 20px;\n  margin-left: 16px;\n  height: 46px;\n  background: #9E8869;\n  padding: 10px 12px;\n  border: 3px solid rgba(255,255,255,0.9);\n  border-radius: 3px;\n']);
+var _templateObject = _taggedTemplateLiteral(['\n  margin-top: 50px;\n  padding: 20px;\n  text-align: center;\n'], ['\n  margin-top: 50px;\n  padding: 20px;\n  text-align: center;\n']),
+    _templateObject2 = _taggedTemplateLiteral(['\n  font-size: 12px;\n  font-family: \'Roboto\', san-serif;\n  color: #333;\n'], ['\n  font-size: 12px;\n  font-family: \'Roboto\', san-serif;\n  color: #333;\n']),
+    _templateObject3 = _taggedTemplateLiteral(['\n  display: block;\n  color: rgba(255,255,255,0.9);\n  font-family: \'Roboto\', san-serif;\n  font-size: 16px;\n  letter-spacing: 0.5px;\n  margin-right: 20px;\n  margin-left: 16px;\n  height: 46px;\n  background: #9E8869;\n  padding: 10px 12px;\n  border: 3px solid rgba(255,255,255,0.9);\n  border-radius: 3px;\n  text-align: center;\n'], ['\n  display: block;\n  color: rgba(255,255,255,0.9);\n  font-family: \'Roboto\', san-serif;\n  font-size: 16px;\n  letter-spacing: 0.5px;\n  margin-right: 20px;\n  margin-left: 16px;\n  height: 46px;\n  background: #9E8869;\n  padding: 10px 12px;\n  border: 3px solid rgba(255,255,255,0.9);\n  border-radius: 3px;\n  text-align: center;\n']);
 
 var _react = __webpack_require__(7);
 
@@ -27161,11 +27163,17 @@ var FormRegister = function (_Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'form',
-        null,
+        Form,
+        { id: 'register' },
+        _react2.default.createElement(Label, null),
         _react2.default.createElement('input', { type: 'text', name: 'pet-name' }),
+        _react2.default.createElement(Label, null),
         _react2.default.createElement('input', { type: 'text', name: 'owner-phone-number' }),
-        _react2.default.createElement(UploadButton, null)
+        _react2.default.createElement(
+          UploadButton,
+          null,
+          'Upload a photo of your pet'
+        )
       );
     }
   }]);
@@ -27176,7 +27184,11 @@ var FormRegister = function (_Component) {
 exports.default = FormRegister;
 
 
-var UploadButton = _styledComponents2.default.button(_templateObject);
+var Form = _styledComponents2.default.form(_templateObject);
+
+var Label = _styledComponents2.default.label(_templateObject2);
+
+var UploadButton = _styledComponents2.default.button(_templateObject3);
 
 /***/ }),
 /* 46 */
