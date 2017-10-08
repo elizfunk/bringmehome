@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import FileBase64 from 'react-file-base64';
 
 export default class FormRegister extends Component {
 
@@ -7,36 +8,48 @@ export default class FormRegister extends Component {
     super(props);
     this.state = {
       petName: '',
-      ownerPhone: ''
-    }
-
-    handlePetNameChange = (event) => {
-      this.setState({
-        petName: event.target.value,
-      });
-    }
-
-    handlePhoneChange = (event) => {
-      this.setState({
-        ownerPhone: event.target.value,
-      });
+      ownerPhone: '',
+      files: []
     }
   }
+
+  handlePetNameChange = (event) => {
+    this.setState({
+      petName: event.target.value,
+    });
+    console.log("pet name:", this.state.petName)
+  }
+
+  handlePhoneChange = (event) => {
+    this.setState({
+      ownerPhone: event.target.value,
+    });
+    console.log("phone number:", this.state.ownerPhone)
+  }
+
+  getFiles(files){
+    this.setState({ files: files })
+    console.log("pet photo:", this.state.files)
+  }
+
 
   render() {
     return (
       <Form id="register">
-        <Label></Label>
+        <Label>Pet Name:</Label>
         <input type="text"
                name="pet-name" 
                value={this.state.petName}
-               onChange={this.handlePetNameChange/>
-        <Label></Label>
+               onChange={this.handlePetNameChange} />
+        <Label>Owner Phone Number (please include country code):</Label>
         <input type="text"
                name="owner-phone-number"
                value={this.state.ownerPhone}
                onChange={this.handlePhoneChange} />
-        <UploadButton>Upload a photo of your pet</UploadButton>
+        <FileBase64
+          multiple={ true }
+          onDone={ this.getFiles.bind(this) } />
+        <button type="submit">REGISTER</button>
       </Form>
     );
   }
@@ -54,7 +67,7 @@ const Label = styled.label`
   color: #333;
 `
 
-const UploadButton = styled.button`
+const UploadButton = styled.input`
   display: block;
   color: rgba(255,255,255,0.9);
   font-family: 'Roboto', san-serif;
