@@ -20,11 +20,13 @@ class App extends React.Component {
   handleRegisterClick() {
     this.setState({showSplashHeader: false})
     this.setState({showRegisterForm: true})
+    console.log("report button clicked")
   }
 
   handleReportClick() {
     this.setState({showSplashHeader: false})
     this.setState({showReportForm: true})
+    console.log("report button clicked")
   }
 
   render() {
@@ -32,7 +34,7 @@ class App extends React.Component {
       <AppWrapper>
         { this.state.showSplashHeader && <SplashHeader></SplashHeader> }
         { !this.state.showSplashHeader && <Header></Header> }
-        <Navigation></Navigation>
+        <Navigation register={this.handleRegisterClick.bind(this)} report={this.handleRegisterClick.bind(this)}></Navigation>
         { this.state.showRegisterForm && <FormRegister></FormRegister>}
         { this.state.showReportForm && <FormReport></FormReport>}
       </AppWrapper>

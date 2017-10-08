@@ -6,8 +6,8 @@ export default class Navigation extends Component {
   render() {
     return (
       <ButtonWrapper>
-        <LeftButton>Register a pet</LeftButton>
-        <RightButton>Report a found pet</RightButton>
+        <LeftButton onClick={this.props.register}>Register a pet</LeftButton>
+        <RightButton onClick={this.props.report}>Report a found pet</RightButton>
       </ButtonWrapper>
     );
   }
